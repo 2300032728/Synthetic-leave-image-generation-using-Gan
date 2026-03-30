@@ -1,0 +1,24 @@
+# Configuration file for Leaf Disease DCGAN Data Pipeline
+
+# Paths
+data_dir: "./leaf/Lettuce_disease_datasets"
+output_dir: "./preprocessed"
+train_split: 0.7
+val_split: 0.15
+test_split: 0.15
+
+# Image settings
+img_size: 64        # Resize images to 64x64
+channels: 3         # RGB images
+
+# Normalization
+normalize: true     # Normalize images to [-1,1] for GAN training
+
+# Random seed
+seed: 42
+
+# Augmentation (optional, can be extended)
+augmentation:
+  horizontal_flip: true
+  vertical_flip: false
+  rotation: 15
