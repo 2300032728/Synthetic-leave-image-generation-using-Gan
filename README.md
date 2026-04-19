@@ -79,6 +79,7 @@ Collect diseased leaf images from available datasets.
 * **NumPy**
 * **OpenCV / PIL**
 * **Matplotlib**
+* **Streamlit**
 * **Google Colab / Local GPU**
 * **Git & GitHub**
 
