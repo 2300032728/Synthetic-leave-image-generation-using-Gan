@@ -1,83 +1,193 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fdba9e7e-f372-431a-88df-76702e8a7f88" />Synthetic Diseased Leaf Image Generation using DCGAN
-Overview
+# 🌿 Synthetic Diseased Leaf Image Generation using DCGAN
 
-This project implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate synthetic images of diseased plant leaves. The primary objective is to address data scarcity in agricultural datasets by producing realistic artificial samples that can be used for training and research purposes.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fdba9e7e-f372-431a-88df-76702e8a7f88" width="800"/>
+  <br>
+  <em>DCGAN Architecture for Diseased Leaf Image Generation</em>
+</p>
 
-Problem Statement
+---
 
-Plant disease detection systems rely heavily on large and diverse datasets. However, collecting such datasets is difficult, time-consuming, and often results in class imbalance. This limitation reduces the performance and generalization capability of deep learning models.
+## 📌 Overview
 
-Proposed Solution
+This project implements a **Deep Convolutional Generative Adversarial Network (DCGAN)** to generate synthetic images of diseased plant leaves.
 
-This project develops a DCGAN-based generative model that learns the distribution of diseased leaf images and generates new synthetic samples. These generated images can be used to augment datasets and improve model robustness.
+The objective is to solve **data scarcity and class imbalance** in agricultural datasets by generating realistic artificial samples for training and research.
 
-Methodology
-Data Collection
-A dataset of diseased plant leaf images is collected from available sources.
-Preprocessing
-Images are resized to a fixed dimension (e.g., 64×64 or 128×128) and normalized to a suitable range for training.
-Model Architecture
-Generator: Uses transposed convolution layers to generate images from random noise vectors.
-Discriminator: Uses convolutional layers to classify images as real or fake.
-Training
-The generator and discriminator are trained simultaneously in an adversarial setup. The generator aims to produce realistic images, while the discriminator learns to distinguish them from real images.
-Evaluation
-Generated images are evaluated visually and can optionally be assessed using metrics such as Fréchet Inception Distance (FID).
-Tech Stack
-Programming Language: Python
-Deep Learning Framework: PyTorch
-Libraries: NumPy, OpenCV/PIL, Matplotlib
-Environment: Google Colab / Local GPU
-Project Structure
+---
 
+## ❗ Problem Statement
+
+Plant disease detection systems require:
+
+* Large datasets
+* Diverse image samples
+* Balanced class distribution
+
+However:
+
+* Data collection is **time-consuming**
+* Datasets are often **imbalanced**
+* Models show **poor generalization**
+
+---
+
+## 💡 Proposed Solution
+
+This project develops a **DCGAN-based model** that:
+
+* Learns patterns from real diseased leaf images
+* Generates **synthetic samples**
+* Improves dataset **size and diversity**
+* Enhances model **robustness**
+
+---
+
+## ⚙️ Methodology
+
+### 📥 Data Collection
+
+Collect diseased leaf images from available datasets.
+
+### 🔄 Preprocessing
+
+* Resize images (64×64 / 128×128)
+* Normalize pixel values
+
+### 🧠 Model Architecture
+
+* **Generator:** Transposed convolution layers generate images from noise
+* **Discriminator:** Convolution layers classify real vs fake images
+
+### 🔁 Training
+
+* Generator tries to fool the discriminator
+* Discriminator learns to detect fake images
+* Both improve through adversarial learning
+
+### 📊 Evaluation
+
+* Visual inspection
+* Optional metric: **FID (Fréchet Inception Distance)**
+
+---
+
+## 🛠️ Tech Stack
+
+* **Python**
+* **PyTorch**
+* **NumPy**
+* **OpenCV / PIL**
+* **Matplotlib**
+* **Google Colab / Local GPU**
+* **Git & GitHub**
+
+---
+
+## 📁 Project Structure
+
+```bash id="b2l1kt"
 project-root/
-│── data/ # Raw dataset
-│── preprocessed/ # Processed images
-│── checkpoints/ # Saved model weights
-│── samples/ # Generated outputs
-│── generator.py # Generator model
-│── discriminator.py # Discriminator model
-│── train.py # Training script
-│── data_loader.py # Data pipeline
+│── data/
+│── preprocessed/
+│── checkpoints/
+│── samples/
+│── generator.py
+│── discriminator.py
+│── train.py
+│── data_loader.py
 │── README.md
+```
 
-Training Configuration
+---
 
-Image Size: 64×64 / 128×128
-Latent Vector Size: 100
-Batch Size: 64
-Learning Rate: 0.0002
-Optimizer: Adam
-Beta1: 0.5
-Epochs: 100–500
+## ⚙️ Training Configuration
 
-Execution
-Install dependencies
+* Image Size: 64×64 / 128×128
+* Latent Vector Size: 100
+* Batch Size: 64
+* Learning Rate: 0.0002
+* Optimizer: Adam
+* Beta1: 0.5
+* Epochs: 100–500
+
+---
+
+## 🚀 Installation & Execution
+
+### 1️⃣ Clone the Repository
+
+```bash id="r0v0h2"
+git clone https://github.com/2300032728/Synthetic-leave-image-generation-using-Gan.git
+cd Synthetic-leave-image-generation-using-Gan
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash id="kqf7s1"
 pip install torch torchvision numpy matplotlib opencv-python pillow
-Run training
+```
+
+---
+
+### 3️⃣ Run Training
+
+```bash id="2h4y4l"
 python train.py
+```
 
-Generated images will be stored in the samples directory.
+👉 Generated images will be stored in the **samples/** directory.
 
-Results
+---
 
-The DCGAN model is capable of generating synthetic diseased leaf images that resemble real data. These images can be used to improve dataset size and diversity, leading to better performance in disease classification models.
+## 📊 Results
 
-Applications
-Plant disease detection systems
-Dataset augmentation for deep learning models
-Research in precision agriculture
-Improving robustness of image classification models
-Limitations
-Generated images may lack fine-grained details
-Evaluation is primarily visual unless advanced metrics are used
-Performance depends on dataset quality and size
-Future Work
-Improve image quality using advanced GAN variants such as WGAN or StyleGAN
-Apply quantitative evaluation metrics like FID and IS
-Integrate generated data into classification pipelines
-Develop a web interface for real-time image generation
-Conclusion
+* Generates realistic diseased leaf images
+* Improves dataset diversity
+* Enhances model performance
 
-This project demonstrates the effectiveness of DCGAN in generating synthetic diseased leaf images. It provides a scalable solution for addressing data limitations in agricultural AI and supports the development of more robust plant disease detection systems.
+---
 
+## 🌱 Applications
+
+* Plant disease detection
+* Dataset augmentation
+* Precision agriculture
+* Image classification improvement
+
+---
+
+## ⚠️ Limitations
+
+* Fine details may be limited
+* Evaluation is mostly visual
+* Performance depends on dataset quality
+
+---
+
+## 🔮 Future Work
+
+* Improve using **WGAN / StyleGAN**
+* Apply metrics like **FID, IS**
+* Integrate with classification models
+* Build a web interface
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates how **DCGAN can generate synthetic diseased leaf images**, helping overcome dataset limitations and improving agricultural AI systems.
+
+---
+
+## 👤 Author
+
+**Korukonda Shyamala**
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
